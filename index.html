@@ -383,6 +383,29 @@ html, body {
   }
 }
 
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;   /* vertical center */
+  position: relative;
+}
+
+
+.icon-shopping_cart {
+  font-size: 22px;
+  line-height: 1;
+}
+
+
+
+.cart-count {
+  position: absolute;
+  top: 12px;        /* yahin se control hoga */
+  right: -8px;
+  color: black;
+  font-size: 15px;
+  padding: 2px 6px;
+  border-radius: 60%;
+}
 
 
 /* Navbar ke andar icon ko fixed position pe rakhne ke liye */
@@ -517,11 +540,11 @@ window.addEventListener("focus", updateCartCount);
               <a href="contact.html" class="nav-link">Contact</a>
             </li>
 
-
-         <a href="cart.html" class="nav-link position-relative fixed-cart">
-    <span class="icon-shopping_cart"></span>
-    <span id="cart-count" class="cart-count">0</span>
+  <a href="cart.html" class="nav-link position-relative">
+  <span class="icon-shopping_cart"></span>
+  <span id="cart-count" class="cart-count">0</span>
 </a>
+
 
 
             <!-- <li class="nav-item cta cta-colored">
