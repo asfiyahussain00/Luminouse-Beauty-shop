@@ -384,6 +384,20 @@ html, body {
 }
 
 
+
+	  /* Cart icon ko fixed right top pe set karna */
+#ftco-navbar .nav-link.position-relative {
+    position: fixed; /* fixed navbar ke upar */
+    top: 15px;       /* distance from top */
+    right: 20px;     /* distance from right */
+    z-index: 9999;   /* ensure it's above other content */
+    background: #fff; /* optional: background for visibility */
+    padding: 8px 12px; 
+    border-radius: 50px; /* optional rounded */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* optional shadow */
+}
+
+
   </style> 
 
 
@@ -514,10 +528,10 @@ window.addEventListener("focus", updateCartCount);
             </li>
 
 
-          <a href="cart.html" class="nav-link position-relative ">
-         <span class="icon-shopping_cart"></span>
-         <span id="cart-count" class="cart-count">0</span>
-           </a>
+         <a href="cart.html" class="nav-link position-relative fixed-cart">
+    <span class="icon-shopping_cart"></span>
+    <span id="cart-count" class="cart-count">0</span>
+</a>
 
 
             <!-- <li class="nav-item cta cta-colored">
