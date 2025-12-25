@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Minishop - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+
+
+
+
+
+<style>
+
+  
+.ftco-navbar-light .navbar-nav .nav-link {
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  color: #000 !important;
+}
+
+.ftco-navbar-light .navbar-nav .nav-link:hover {
+  color: pink !important;
+}
+
+@media (max-width: 991px) {
+
+  /* Force normal state */
+  .navbar-nav .nav-item .nav-link {
+    color: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Hover / focus */
+  .navbar-nav .nav-item .nav-link:hover,
+  .navbar-nav .nav-item .nav-link:focus {
+    color: #f8c8dc !important;
+  }
+}
+
+
+/* Header scroll hone ke baad */
+.ftco-navbar-light.scrolled {
+  background: #fff !important;
+}
+
+/* Scroll state me menu links BLACK */
+.ftco-navbar-light.scrolled .navbar-nav .nav-link {
+  color: #000 !important;
+}
+
+/* Hover / Active */
+.ftco-navbar-light.scrolled .navbar-nav .nav-link:hover,
+.ftco-navbar-light.scrolled .navbar-nav .nav-link.active {
+  color: pink !important;
+}
+
+/* Mobile menu (scroll + open) */
+@media (max-width: 991px) {
+  .ftco-navbar-light.scrolled .navbar-nav .nav-link {
+    color: #000 !important;
+  }
+}
+
+/* General Section */
+.contact-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+/* Contact Info Boxes */
+.contact-info .info {
+  background: #dadabc;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.contact-info .info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+.contact-info .info p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-info .info span {
+  font-weight: 600;
+  color: #007BFF;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.contact-info .info a {
+  color: #007BFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info .info a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contact-info .info {
+    margin-bottom: 20px;
+    padding: 25px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-info .info {
+    padding: 20px 10px;
+  }
+}
+
+
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  line-height: 55px;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+  color: #fff;
+}
+
+
+
+
+</style>
+
+
+
+  
+
+<script>
+function updateCartCount(){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let count = 0;
+
+  cart.forEach(item => {
+    count += Number(item.quantity);
+  });
+
+  const cartCount = document.getElementById("cart-count");
+  if(cartCount){
+    cartCount.innerText = count;
+  }
+}
+
+// page load
+document.addEventListener("DOMContentLoaded", updateCartCount);
+</script>
+
+
+
+
+
+<nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="images/one (2).png"
+            alt=""
+            width="80"
+            height="70"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown04"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Catalog</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="cart.html">Cart</a>
+                <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownBlog"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownBlog">
+                <a class="dropdown-item" href="face.html">Face</a>
+                <a class="dropdown-item" href="hair.html">Hair</a>
+                <a class="dropdown-item" href="body.html"
+                  >Body</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <a href="cart.html" class="nav-link position-relative ">
+         <span class="icon-shopping_cart"></span>
+         <span id="cart-count" class="cart-count">0</span>
+           </a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+<!-- Floating WhatsApp Button -->
+<a
+  href="https://wa.me/923215030213"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <i class="icon-whatsapp"></i>
+</a>
+
+
+
+
+    <div class="hero-wrap hero-bread" style="background-image: url('images/contact.jpg');">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
+            <h1 class="mb-0 bread">About Us</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="container">
+				<div class="row no-gutters ftco-services">
+          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services p-4 py-md-5">
+              <div class="icon d-flex justify-content-center align-items-center mb-4">
+            		<span class="flaticon-bag"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Free Shipping</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services p-4 py-md-5">
+              <div class="icon d-flex justify-content-center align-items-center mb-4">
+            		<span class="flaticon-customer-service"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Support Customer</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services p-4 py-md-5">
+              <div class="icon d-flex justify-content-center align-items-center mb-4">
+            		<span class="flaticon-payment-security"></span>
+              </div>
+              <div class="media-body">
+                <h3 class="heading">Secure Payments</h3>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              </div>
+            </div>      
+          </div>
+        </div>
+			</div>
+		</section>
+
+    
+
+
+
+    <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center"
+            style="background-image: url(images/img2.jpg)"
+          >
+            <a
+              href="https://www.youtube.com/watch?v=uqszyobAZA8"
+              class="icon popup-vimeo d-flex justify-content-center align-items-center"
+            >
+              <span class="icon-play"></span>
+            </a>
+          </div>
+          <div class="col-md-7 py-md-5 wrap-about pb-md-5 ftco-animate">
+            <div class="heading-section-bold mb-4 mt-md-5">
+              <div class="ml-md-0">
+                <h2 class="mb-4">Stablished Sinced 1975</h2>
+              </div>
+            </div>
+            <div class="pb-md-5 pb-4">
+              <p>
+                Our body and skincare products are thoughtfully crafted to
+                nourish, protect, and restore your skin’s natural glow. Made
+                with gentle ingredients, each formula is designed to care for
+                your skin every day.
+              </p>
+              <p>
+                Experience the perfect balance of hydration, comfort, and
+                confidence with products that love your skin as much as you do.
+              </p>
+              <p>
+                <a href="hair.html" class="btn btn-primary">Shop Now</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="ftco-section testimony-section">
+  <div class="container">
+    <div class="row">
+
+      <!-- LEFT SERVICES -->
+      <div class="col-lg-5">
+        <div class="services-flow">
+
+          <div class="services-2 p-4 d-flex ftco-animate">
+            <div class="icon"><span class="flaticon-bag"></span></div>
+            <div class="text">
+              <h3>Free Shipping</h3>
+              <p class="mb-0">Fast & safe delivery for all skincare products.</p>
+            </div>
+          </div>
+
+          <div class="services-2 p-4 d-flex ftco-animate">
+            <div class="icon"><span class="flaticon-heart-box"></span></div>
+            <div class="text">
+              <h3>Gift Sets</h3>
+              <p class="mb-0">Perfect skincare gifts for your loved ones.</p>
+            </div>
+          </div>
+
+          <div class="services-2 p-4 d-flex ftco-animate">
+            <div class="icon"><span class="flaticon-payment-security"></span></div>
+            <div class="text">
+              <h3>Secure Payments</h3>
+              <p class="mb-0">100% safe & trusted payment methods.</p>
+            </div>
+          </div>
+
+          <div class="services-2 p-4 d-flex ftco-animate">
+            <div class="icon"><span class="flaticon-customer-service"></span></div>
+            <div class="text">
+              <h3>24/7 Support</h3>
+              <p class="mb-0">We are always here to help you.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT TESTIMONIALS -->
+      <div class="col-lg-7">
+        <div class="heading-section ftco-animate mb-5">
+          <h2 class="mb-4">What Our Happy Customers Say</h2>
+          <p>Real reviews from customers who trust Luminouse Beauty.</p>
+        </div>
+
+        <div class="carousel-testimony owl-carousel ftco-animate">
+
+          <div class="item">
+            <div class="testimony-wrap">
+              <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-4 pl-4 line">
+                  “My skin feels soft, glowing, and healthy after using these products!”
+                </p>
+                <p class="name">Emma Johnson</p>
+                <span class="position">Beauty Enthusiast</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimony-wrap">
+              <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-4 pl-4 line">
+                  “Highly recommended! Excellent quality & fast delivery.”
+                </p>
+                <p class="name">Sophia Lee</p>
+                <span class="position">Customer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimony-wrap">
+              <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-4 pl-4 line">
+                  “Perfect skincare for daily use. Love it!”
+                </p>
+                <p class="name">Ayesha Khan</p>
+                <span class="position">Regular Buyer</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="ftco-gallery">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 heading-section text-center mb-4 ftco-animate">
+        <h2 class="mb-4">Follow Us On Instagram</h2>
+        <p>
+          Check out our latest skincare products and see how our customers are
+          glowing. Follow us on Instagram for daily beauty tips!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid px-0">
+    <div class="row no-gutters">
+
+      <!-- Item 1 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://www.thebodyshop.com.au/cdn/shop/files/CAENG_23Q2_VitaminCRange.jpg?crop=center&height=525&v=1760074730&width=525);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://dam.mediacorp.sg/image/upload/s--HUwp9Muh--/f_auto,q_auto/v1/mediacorp/cna/image/2024/07/26/the_right_way_to_use_vitamin_c_to_combat_those_pesky_dark_spots_2.jpg);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCwfpt6zEXyVeH10L9JKcRWFPLDQY_zAgpYw&s);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://cdn-cjhgk.nitrocdn.com/CXxGixRVyChwAxySbAyltuCiQXRKaWDN/assets/images/optimized/rev-9dad235/www.newbeauty.com/wp-content/uploads/2022/05/cer9.jpg);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1dLS9yF4NQDW0m28b1DfQuisYKdLtGXnstg&s);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://joinherbeauty.com/cdn/shop/products/Her-34-Version011.png?v=1756061861&width=533);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+      	<div class="row">
+      		<div class="mouse">
+						<a href="#" class="mouse-icon">
+							<div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+						</a>
+					</div>
+      	</div>
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Luminouse Beauty shop</h2>
+              
+           <p>Nurturing your skin with gentle, effective, and trusted skincare products for a healthy, radiant glow.</p>
+
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              
+                <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61584606287033"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/luminouse_beauty/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Menu</h2>
+              <ul class="list-unstyled">
+                <li><a href="hair.html" class="py-2 d-block">Categories</a></li>
+                <li><a href="about.html" class="py-2 d-block">About</a></li>
+                <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Help</h2>
+              <div class="d-flex">
+	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+	                <li><a href="shipping.html" class="py-2 d-block">Shipping Information</a></li> 
+	                <li><a href="condition.html" class="py-2 d-block">Terms &amp; Conditions</a></li>
+	                <li><a href="contact.html" class="py-2 d-block">Contact us</a></li>
+	              </ul>
+	            
+	            </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Karachi , pakistan
+                  </span></li>
+	                <li>
+           <a href="https://wa.me/923215030213" target="_blank">
+    <span class="icon icon-phone"></span>
+    <span class="text">+92 321 5030213</span>
+  </a>
+</li>
+
+<li>
+  <a href="mailto:LuminouseBeauty004@gmail.com">
+    <span class="icon icon-envelope"> </span>
+    <span class="text"> LuminouseBeauty004@gmail.com</span>
+  </a>
+</li>
+
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+       <div class="row">
+      <div class="col-md-12 text-center">
+        <p>
+          &copy;<script>document.write(new Date().getFullYear());</script> © 2025 LuminouseBeauty . All Rights Reserved. </a>
+        </p>
+      </div>
+    </div>
+
+      </div>
+    </footer>
+    
+ 
+  
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/25/25231.png" type="image/png">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+
+
+</head>
+<body>
+   <style>
+
+
+
+
+
+   
+/* ===== General Reset ===== */
+
+.delivery-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 8px;
+}
+
+.delivery-container h1 {
+  text-align: center;
+  font-size: 28px;
+  color:  rgb(25, 25, 229);
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+
+.delivery-container h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  color:  rgb(25, 25, 229);
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+}
+
+.delivery-container p {
+  margin: 12px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.delivery-container ul {
+  margin: 12px 0 12px 20px;
+}
+
+.delivery-container ul li {
+  margin-bottom: 8px;
+}
+
+.delivery-container strong {
+  color: #111;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .delivery-container {
+    margin: 20px;
+    padding: 15px 20px;
+  }
+  .delivery-container h1 {
+    font-size: 22px;
+  }
+  .delivery-container h2 {
+    font-size: 18px;
+  }
+}
+
+
+
+
+
+ 
+.ftco-navbar-light .navbar-nav .nav-link {
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  color: #000 !important;
+}
+
+.ftco-navbar-light .navbar-nav .nav-link:hover {
+  color: pink !important;
+}
+
+@media (max-width: 991px) {
+
+  /* Force normal state */
+  .navbar-nav .nav-item .nav-link {
+    color: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Hover / focus */
+  .navbar-nav .nav-item .nav-link:hover,
+  .navbar-nav .nav-item .nav-link:focus {
+    color: #f8c8dc !important;
+  }
+}
+
+
+/* Header scroll hone ke baad */
+.ftco-navbar-light.scrolled {
+  background: #fff !important;
+}
+
+/* Scroll state me menu links BLACK */
+.ftco-navbar-light.scrolled .navbar-nav .nav-link {
+  color: #000 !important;
+}
+
+/* Hover / Active */
+.ftco-navbar-light.scrolled .navbar-nav .nav-link:hover,
+.ftco-navbar-light.scrolled .navbar-nav .nav-link.active {
+  color: pink !important;
+}
+
+/* Mobile menu (scroll + open) */
+@media (max-width: 991px) {
+  .ftco-navbar-light.scrolled .navbar-nav .nav-link {
+    color: #000 !important;
+  }
+}
+
+
+
+
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  line-height: 55px;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+  color: #fff;
+}
+
+
+
+
+   </style>
+ 
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+    
+
+   <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="images/one (2).png"
+            alt=""
+            width="80"
+            height="70"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown04"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Catalog</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="cart.html">Cart</a>
+                <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownBlog"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownBlog">
+                <a class="dropdown-item" href="face.html">Face</a>
+                <a class="dropdown-item" href="hair.html">Hair</a>
+                <a class="dropdown-item" href="body.html"
+                  >Body</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+
+
+         
+
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+<br>
+<br>
+<br>
+
+ <div class="delivery-container">
+  <h1>Delivery Policy</h1>
+
+  <h2>Service Area</h2>
+  <p>
+    <strong>Luminouse Beauty shop</strong> currently offers delivery services across all areas of <strong>Karachi, Pakistan</strong>.  
+    Our goal is to ensure that you receive your medicines and healthcare products safely and on time.
+  </p>
+
+  <h2>Delivery Charges</h2>
+  <ul>
+    <li>Order value below Rs. 5000 – <strong>Rs. 159 delivery fee</strong></li>
+    <li>Order value Rs. 5000 and above – <strong>Free Delivery</strong></li>
+  </ul>
+
+  <h2>Delivery Time</h2>
+  <ul>
+    <li>Orders placed before 5 PM will be delivered the same day (subject to product availability).</li>
+    <li>Orders placed after 5 PM will be delivered the next working day.</li>
+    <li>Delivery timings may vary during weekends, public holidays, or high-demand periods.</li>
+  </ul>
+
+  <h2>Additional Information</h2>
+  <ul>
+    <li>Please make sure your contact number and address are correct for smooth delivery.</li>
+    <li>Our delivery team will confirm your order by phone or WhatsApp before dispatch.</li>
+    <li>Customers are requested to check their orders upon receipt to ensure all items are correct.</li>
+    <li><strong>Note:</strong> Items that require refrigeration (like insulin or vaccines) will be delivered under controlled conditions within Karachi only.</li>
+  </ul>
+
+  <p>
+    For any delivery-related questions, please contact us via WhatsApp at  
+    <a href="https://wa.me/923215030213" target="_blank" style="color: green; text-decoration: none;">+923215030213</a>  
+    or email us at  
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=LuminouseBeauty004@gmail.com" target="_blank" style="color: green; text-decoration: none;">LuminouseBeauty004@gmail.com</a>.
+  </p>
+</div>
+
+
+
+<!-- Floating WhatsApp Button -->
+<a
+  href="https://wa.me/923215030213"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <i class="icon-whatsapp"></i>
+</a>
+
+
+
+
+
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+      	<div class="row">
+      		<div class="mouse">
+						<a href="#" class="mouse-icon">
+							<div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+						</a>
+					</div>
+      	</div>
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Luminouse Beauty shop</h2>
+              
+           <p>Nurturing your skin with gentle, effective, and trusted skincare products for a healthy, radiant glow.</p>
+
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              
+                <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61584606287033"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/luminouse_beauty/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Menu</h2>
+              <ul class="list-unstyled">
+                <li><a href="hair.html" class="py-2 d-block">Categories</a></li>
+                <li><a href="about.html" class="py-2 d-block">About</a></li>
+                <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Help</h2>
+              <div class="d-flex">
+	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+	                <li><a href="shipping.html" class="py-2 d-block">Shipping Information</a></li> 
+	                <li><a href="condition.html" class="py-2 d-block">Terms &amp; Conditions</a></li>
+	                <li><a href="contact.html" class="py-2 d-block">Contact us</a></li>
+	              </ul>
+	            
+	            </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Karachi , pakistan
+                  </span></li>
+	                <li>
+           <a href="https://wa.me/923215030213" target="_blank">
+    <span class="icon icon-phone"></span>
+    <span class="text">+92 321 5030213</span>
+  </a>
+</li>
+
+<li>
+  <a href="mailto:LuminouseBeauty004@gmail.com">
+    <span class="icon icon-envelope"> </span>
+    <span class="text"> LuminouseBeauty004@gmail.com</span>
+  </a>
+</li>
+
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+       <div class="row">
+      <div class="col-md-12 text-center">
+        <p>
+          &copy;<script>document.write(new Date().getFullYear());</script> © 2025 LuminouseBeauty . All Rights Reserved. </a>
+        </p>
+      </div>
+    </div>
+
+      </div>
+    </footer>
+    
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+
+
+
+
+
+
+</body>
+</html>

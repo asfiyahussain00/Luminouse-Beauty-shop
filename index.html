@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Minishop - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+
+  <style>
+
+.services-section{
+  padding: 80px 0;
+  background: rgb(217, 218, 193); /* light yellow background */
+}
+
+.service-card{
+  background: #fff;
+  padding: 40px 25px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.service-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 223, 100, 0.25); /* yellow glow on hover */
+}
+
+.icon-box{
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #c1b784, #ffec99); /* yellow gradient */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+
+.icon-box span{
+  font-size: 32px;
+  color: #fff;
+}
+
+.service-card h3{
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.service-card p{
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Responsive for mobile */
+@media (max-width: 767px){
+  .service-card{
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px){
+
+  .services-section{
+    padding: 40px 0;   /* overall section thoda chhota */
+  }
+
+  .service-card{
+    padding: 12px 15px;   /* aur chhota card */
+    border-radius: 12px;
+    margin-bottom: 25px;  /* card ke beech gap */
+    gap: 0;                /* unnecessary gap remove */
+    width: 100%;           /* full width for 1 card per row */
+    box-sizing: border-box;
+  }
+
+  .icon-box{
+    width: 50px;           /* icon aur chhota */
+    height: 50px;
+    margin-bottom: 12px;
+  }
+
+  .icon-box span{
+    font-size: 20px;       /* icon font chhota */
+  }
+
+  .service-card h3{
+    font-size: 16px;       /* heading chhoti */
+    margin-bottom: 8px;
+  }
+
+  .service-card p{
+    font-size: 13px;       /* paragraph chhoti */
+    line-height: 1.4;
+  }
+}
+
+
+
+
+
+.thumb-deal {
+    display: flex;
+    gap: 10px; /* thumbnails ke beech 10px ka space */
+    margin-top: 15px;
+}
+
+.thumb-deal .img {
+    width: 60px; /* apni requirement ke hisaab se size */
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.main-img, .second-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.thumb-deal {
+    display: flex;
+    gap: 10px; /* thumbnails ke beech space */
+    margin-top: 70px;
+}
+
+.thumb-deal .img {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumb-deal .img:hover {
+    transform: scale(1.1);
+
+}
+
+.hero .slider-item img {
+    width: 100%;      /* image chhoti karne ke liye */
+    max-width: 650px; /* max size set kar sakte ho */
+    height: auto;
+    display: block;
+  
+    margin-right: 50px;
+}
+
+#home-section .slider-item .overlay {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+#home-section h1,
+#home-section p,
+#home-section .subheading {
+  color: #000;
+}
+
+
+
+
+html, body {
+  height: 100%;
+}
+
+#home-section,
+.hero,
+.home-slider,
+.slider-item,
+.js-fullheight {
+  min-height: 100vh;
+  background: #fff !important;
+}
+
+
+
+#home-section .subheading {
+  color: white !important;
+}
+
+
+
+.ftco-navbar-light .navbar-nav .nav-link {
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  color: #000 !important;
+}
+
+.ftco-navbar-light .navbar-nav .nav-link:hover {
+  color: pink !important;
+}
+
+
+
+/* 🔹 Default (Desktop already fine) */
+
+/* 🔹 Tablet & Mobile */
+@media (max-width: 991px) {
+
+  /* Slider height */
+  .js-fullheight {
+    min-height: auto !important;
+    padding: 40px 0;
+  }
+
+  /* Row direction */
+  .slider-text {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Image */
+  .slider-item img.one-third {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 20px;
+    order: 1;
+  }
+
+  /* Text container */
+  .one-forth {
+    width: 100%;
+    order: 2;
+  }
+
+  /* Heading */
+  .hero h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  /* Paragraph */
+  .hero p {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+
+  /* Button */
+  .btn-custom {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
+
+/* 🔹 Small Mobile */
+@media (max-width: 575px) {
+
+  .slider-item img.one-third {
+    max-width: 260px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991px) {
+
+  /* Force normal state */
+  .navbar-nav .nav-item .nav-link {
+    color: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Hover / focus */
+  .navbar-nav .nav-item .nav-link:hover,
+  .navbar-nav .nav-item .nav-link:focus {
+    color: #f8c8dc !important;
+  }
+}
+
+
+/* Header scroll hone ke baad */
+.ftco-navbar-light.scrolled {
+  background: #fff !important;
+}
+
+/* Scroll state me menu links BLACK */
+.ftco-navbar-light.scrolled .navbar-nav .nav-link {
+  color: #000 !important;
+}
+
+/* Hover / Active */
+.ftco-navbar-light.scrolled .navbar-nav .nav-link:hover,
+.ftco-navbar-light.scrolled .navbar-nav .nav-link.active {
+  color: pink !important;
+}
+
+/* Mobile menu (scroll + open) */
+@media (max-width: 991px) {
+  .ftco-navbar-light.scrolled .navbar-nav .nav-link {
+    color: #000 !important;
+  }
+}
+
+.ftco-footer-social li {
+  margin-top: -20px;   /* value adjust kar sakti ho */
+} 
+
+
+
+.image-prod .img {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+
+
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  line-height: 55px;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+  color: #fff;
+}
+
+
+
+
+  </style> 
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+
+      let name = this.dataset.name;
+      let price = parseFloat(this.dataset.price);
+      let image = this.dataset.image;
+
+      if(!name || !price || !image){
+        alert("Product data missing!");
+        return;
+      }
+
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      let existing = cart.find(item => item.name === name);
+      if(existing){
+        existing.quantity += 1;
+      } else {
+        cart.push({ name, price, image, quantity: 1 });
+      }
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      alert(name + " added to cart!"); // redirect nahi kar rahe taake multiple add ho sake
+    });
+  });
+
+});
+
+function updateCartCount(){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let total = cart.reduce((sum, item) => sum + Number(item.quantity), 0);
+  let el = document.getElementById("cart-count");
+  if(el) el.textContent = total;
+}
+
+// Page load pe update
+document.addEventListener("DOMContentLoaded", updateCartCount);
+
+// Page wapas focus me bhi update (jab user cart page se home aaye)
+window.addEventListener("focus", updateCartCount);
+
+
+</script>
+
+
+
+
+
+
+   <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="images/one (2).png"
+            alt=""
+            width="80"
+            height="70"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown04"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Catalog</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="cart.html">Cart</a>
+                <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownBlog"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownBlog">
+                <a class="dropdown-item" href="face.html">Face</a>
+                <a class="dropdown-item" href="hair.html">Hair</a>
+                <a class="dropdown-item" href="body.html"
+                  >Body</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+
+
+          <a href="cart.html" class="nav-link position-relative ">
+         <span class="icon-shopping_cart"></span>
+         <span id="cart-count" class="cart-count">0</span>
+           </a>
+
+
+            <!-- <li class="nav-item cta cta-colored">
+              <a href="cart.html" class="nav-link"
+                ><span class="icon-shopping_cart"></span>[0]</a
+              >
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<section id="home-section" class="hero">
+  <div class="home-slider owl-carousel">
+
+    <!-- Slide 1 -->
+    <div class="slider-item js-fullheight">
+      <div class="overlay"></div>
+      <div class="container-fluid p-0">
+        <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+          
+          <!-- Image -->
+          <img class="one-third order-md-last img-fluid" src="images/banner imges.jpg" alt="Skin Care Products">
+
+          <!-- Text -->
+          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
+            <div class="text">
+              <span class="subheading">#GlowNaturally</span>
+              <div class="horizontal">
+                <h1 class="mb-4 mt-3">Luxury Skin Care Collection</h1>
+                <p class="mb-4">
+                  Nourish your skin with premium, dermatologist approved skincare products.
+                  Designed for radiant, healthy, and glowing skin.
+                </p>
+                <p>
+                  <a href="body.html" class="btn-custom">Shop Now</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slider-item js-fullheight">
+      <div class="overlay"></div>
+      <div class="container-fluid p-0">
+        <div class="row d-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+          
+          <!-- Image -->
+          <img class="one-third order-md-last img-fluid" src="https://img.freepik.com/premium-vector/ad-banner-beauty-product_317442-1871.jpg" alt="Organic Skin Care">
+
+          <!-- Text -->
+          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
+            <div class="text">
+              <span class="subheading">#OrganicBeauty</span>
+              <div class="horizontal">
+                <h1 class="mb-4 mt-3">Organic & Natural Skin Care</h1>
+                <p class="mb-4">
+                  Made with natural ingredients to hydrate, repair, and protect your skin.
+                  Perfect for all skin types.
+                </p>
+                <p>
+                  <a href="hair.html" class="btn-custom">Explore Products</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<section class="services-section">
+  <div class="container">
+    <div class="row">
+
+      <!-- Service 1 -->
+      <div class="col-lg-4 col-md-6 text-center">
+        <div class="service-card">
+          <div class="icon-box">
+            <span class="flaticon-bag"></span>
+          </div>
+          <h3>Free Shipping</h3>
+          <p>Far far away, behind the word mountains, premium shipping for all orders.</p>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-lg-4 col-md-6 text-center">
+        <div class="service-card">
+          <div class="icon-box">
+            <span class="flaticon-customer-service"></span>
+          </div>
+          <h3>Support Customer</h3>
+          <p>24/7 customer support for your queries and assistance.</p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-lg-4 col-md-6 text-center">
+        <div class="service-card">
+          <div class="icon-box">
+            <span class="flaticon-payment-security"></span>
+          </div>
+          <h3>Secure Payments</h3>
+          <p>Safe & trusted payment methods for smooth checkout experience.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="ftco-section bg-light">
+  <div class="container">
+    <div class="row justify-content-center mb-3 pb-3">
+      <div class="col-md-12 heading-section text-center ftco-animate">
+        <h2 class="mb-4">Beauty Essentials</h2>
+        <p>“Enhance your natural beauty with our premium, skin-loving cosmetics.”</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <!-- Product 1 -->
+      <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+        <div class="product d-flex flex-column">
+          <a href="#" class="img-prod">
+            <img class="img-fluid" src="images/product1.jpg" alt="">
+            <div class="overlay"></div>
+          </a>
+          <div class="text py-3 pb-4 px-3">
+            <div class="d-flex">
+              <div class="cat"><span>Lifestyle</span></div>
+              <div class="rating">
+                <p class="text-right mb-0">
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                </p>
+              </div>
+            </div>
+            <h3><a href="#">L'Oréal Paris Serie Expert Absolute Repair Golden Professional Mask 500 ml</a></h3>
+            <div class="pricing">
+              <p class="price"><span>Rs.11,800.00</span></p>
+            </div>
+            <p class="bottom-area d-flex px-3">
+              <a href="cart.html" class="add-to-cart text-center py-2 mr-1"
+                 data-name="L'Oréal Paris Absolute Repair Mask 500ml"
+                 data-price="11800"
+                 data-image="images/product1.jpg">
+                <span>Add to cart <i class="ion-ios-add ml-1"></i></span>
+              </a>
+              <a href="hair.html" class="buy-now text-center py-2">Buy now<i class="ion-ios-cart ml-1"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+        <div class="product d-flex flex-column">
+          <a href="#" class="img-prod">
+            <img class="img-fluid" src="images/product2.jpg" alt="">
+            <div class="overlay"></div>
+          </a>
+          <div class="text py-3 pb-4 px-3">
+            <div class="d-flex">
+              <div class="cat"><span>Lifestyle</span></div>
+              <div class="rating">
+                <p class="text-right mb-0">
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                  <span class="ion-ios-star-outline"></span>
+                </p>
+              </div>
+            </div>
+            <h3><a href="#">SuperStay Maybelline Ink Lip Crayon Lipstick 75 Speak Your Mind</a></h3>
+            <div class="pricing">
+              <p class="price"><span class="mr-2 price-dc">Rs.2,800.00</span><span class="price-sale">Rs.2,500.00</span></p>
+            </div>
+            <p class="bottom-area d-flex px-3">
+              <a href="cart.html" class="add-to-cart text-center py-2 mr-1"
+                 data-name="Maybelline SuperStay Ink Lip Crayon"
+                 data-price="2500"
+                 data-image="images/product2.jpg">
+                <span>Add to cart <i class="ion-ios-add ml-1"></i></span>
+              </a>
+              <a href="face.html" class="buy-now text-center py-2">Buy now<i class="ion-ios-cart ml-1"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+        <div class="product">
+          <a href="#" class="img-prod">
+            <img class="img-fluid" src="images/product3.jpg" alt="">
+            <div class="overlay"></div>
+          </a>
+          <div class="text py-3 pb-4 px-3">
+            <div class="d-flex">
+              <div class="cat"><span>Lifestyle</span></div>
+              <div class="rating"><p class="mb-0">
+                <span class="ion-ios-star-outline"></span><span class="ion-ios-star-outline"></span>
+                <span class="ion-ios-star-outline"></span><span class="ion-ios-star-outline"></span>
+                <span class="ion-ios-star-outline"></span>
+              </p></div>
+            </div>
+            <h3><a href="#">Maybelline Baby Lips Balm & Blush 06 Shimmering Bronze</a></h3>
+            <div class="pricing"><p class="price"><span>Rs.1,600.00</span></p></div>
+            <p class="bottom-area d-flex px-3">
+              <a href="cart.html" class="add-to-cart text-center py-2 mr-1"
+                 data-name="Maybelline Baby Lips Balm & Blush"
+                 data-price="1600"
+                 data-image="images/product3.jpg">
+                <span>Add to cart <i class="ion-ios-add ml-1"></i></span>
+              </a>
+              <a href="face.html" class="buy-now text-center py-2">Buy now<i class="ion-ios-cart ml-1"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+        <div class="product">
+          <a href="#" class="img-prod">
+            <img class="img-fluid" src="images/product4.jpg" alt="">
+            <div class="overlay"></div>
+          </a>
+          <div class="text py-3 pb-4 px-3">
+            <div class="d-flex">
+              <div class="cat"><span>Lifestyle</span></div>
+              <div class="rating"><p class="mb-0">
+                <span class="ion-ios-star-outline"></span><span class="ion-ios-star-outline"></span>
+                <span class="ion-ios-star-outline"></span><span class="ion-ios-star-outline"></span>
+                <span class="ion-ios-star-outline"></span>
+              </p></div>
+            </div>
+            <h3><a href="#">Maybelline Fit Me Foundation Matte & Poreless 100 Warm Ivory</a></h3>
+            <div class="pricing"><p class="price"><span>Rs.3,200.00</span></p></div>
+            <p class="bottom-area d-flex px-3">
+              <a href="cart.html" class="add-to-cart text-center py-2 mr-1"
+                 data-name="Maybelline Fit Me Foundation"
+                 data-price="3200"
+                 data-image="images/product4.jpg">
+                <span>Add to cart <i class="ion-ios-add ml-1"></i></span>
+              </a>
+              <a href="face.html" class="buy-now text-center py-2">Buy now<i class="ion-ios-cart ml-1"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+        <div class="product">
+          <a href="#" class="img-prod">
+            <img class="img-fluid" src="images/product5.jpg" alt="">
+            <div class="overlay"></div>
+          </a>
+          <div class="text py-3 pb-4 px-3">
+            <h3><a href="#">CeraVe Ultra Gentle Hydrating Micellar Cleansing Water 295ml</a></h3>
+            <div class="pricing"><p class="price"><span>Rs.5,200.00</span></p></div>
+            <p class="bottom-area d-flex px-3">
+              <a href="cart.html" class="add-to-cart text-center py-2 mr-1"
+                 data-name="CeraVe Micellar Cleansing Water 295ml"
+                 data-price="5200"
+                 data-image="images/product5.jpg">
+                <span>Add to cart <i class="ion-ios-add ml-1"></i></span>
+              </a>
+              <a href="body.html" class="buy-now text-center py-2">Buy now<i class="ion-ios-cart ml-1"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+        <div class="product">
+          <a href="#" class="img-prod">
+            <img class="img-fluid" src="images/product6.jpg" alt="">
+            <span class="status">50% Off</span>
+            <div class="overlay"></div>
+          </a>
+          <div class="text py-3 pb-4 px-3">
+            <h3><a href="#">Maybelline Baby Skin Pore Eraser Primer</a></h3>
+            <div class="pricing">
+              <p class="price"><span class="mr-2 price-dc">Rs.5,200.00</span><span class="price-sale">Rs.2,600.00</span></p>
+            </div>
+            <p class="bottom-area d-flex px-3">
+              <a href="cart.html" class="add-to-cart text-center py-2 mr-1"
+                 data-name="Maybelline Baby Skin Primer"
+                 data-price="2600"
+                 data-image="images/product6.jpg">
+                <span>Add to cart <i class="ion-ios-add ml-1"></i></span>
+              </a>
+              <a href="face.html" class="buy-now text-center py-2">Buy now<i class="ion-ios-cart ml-1"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+        <div class="product">
+          <a href="#" class="img-prod">
+            <img class="img-fluid" src="images/product7.jpg" alt="">
+            <div class="overlay"></div>
+          </a>
+          <div class="text py-3 pb-4 px-3">
+            <h3><a href="#">Bourjois Healthy Mix Anti-Fatigue Concealer 53 Dark</a></h3>
+            <div class="pricing"><p class="price"><span>Rs.2,800.00</span></p></div>
+            <p class="bottom-area d-flex px-3">
+              <a href="cart.html" class="add-to-cart text-center py-2 mr-1"
+                 data-name="Bourjois Healthy Mix Concealer 53 Dark"
+                 data-price="2800"
+                 data-image="images/product7.jpg">
+                <span>Add to cart <i class="ion-ios-add ml-1"></i></span>
+              </a>
+              <a href="face.html" class="buy-now text-center py-2">Buy now<i class="ion-ios-cart ml-1"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+        <div class="product">
+          <a href="#" class="img-prod">
+            <img class="img-fluid" src="images/product8.jpg" alt="">
+            <div class="overlay"></div>
+          </a>
+          <div class="text py-3 pb-4 px-3">
+            <h3><a href="#">Cerave Hydrating Cleanser For Normal To Dry Skin 236ml</a></h3>
+            <div class="pricing"><p class="price"><span>Rs.6,200.00</span></p></div>
+            <p class="bottom-area d-flex px-3">
+              <a href="cart.html" class="add-to-cart text-center py-2 mr-1"
+                 data-name="CeraVe Hydrating Cleanser 236ml"
+                 data-price="6200"
+                 data-image="images/product8.jpg">
+                <span>Add to cart <i class="ion-ios-add ml-1"></i></span>
+              </a>
+              <a href="body.html" class="buy-now text-center py-2">Buy now<i class="ion-ios-cart ml-1"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="ftco-section ftco-choose ftco-no-pb ftco-no-pt">
+  <div class="container">
+    <div class="row no-gutters">
+
+      <!-- Product Category 1 -->
+      <div class="col-lg-4">
+        <div class="choose-wrap divider-one img p-5 d-flex align-items-end" style="background-image: url(images/img6.jpg);">
+          <div class="text text-center text-white px-2">
+            <span class="subheading">Face Care</span>
+            <h2>Luxury Face Creams</h2>
+            <p>Hydrate, brighten, and rejuvenate your skin with our premium face creams made for all skin types.</p>
+            <p><a href="face.html" class="btn btn-black px-3 py-2">Shop now</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Category 2 -->
+      <div class="col-lg-8">
+        <div class="row no-gutters choose-wrap divider-two align-items-stretch">
+
+          <!-- Women's Skincare -->
+          <div class="col-md-12">
+            <div class="choose-wrap full-wrap img align-self-stretch d-flex align-item-center justify-content-end" style="background-image: url(images/img8.jpg);">
+              <div class="col-md-7 d-flex align-items-center">
+                <div class="text text-white px-5">
+                  <span class="subheading">Body Care</span>
+                  <h2>Moisturizers & Body Wash</h2>
+                  <p>Keep your skin soft and smooth with our specially formulated body care range, including washes and lotions.</p>
+                  <p><a href="body.html" class="btn btn-black px-3 py-2">Shop now</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Summer Sale & Best Sellers -->
+          <div class="col-md-12">
+            <div class="row no-gutters">
+
+              <!-- Summer Sale -->
+              <div class="col-md-6">
+                <div class="choose-wrap wrap img align-self-stretch bg-light d-flex align-items-center">
+                  <div class="text text-center px-5">
+                    <span class="subheading">Special Offer</span>
+                    <h2>Extra 50% Off</h2>
+                    <p>Get your favorite skin care essentials at amazing discounts this season. Limited time offer!</p>
+                    <p><a href="face.html" class="btn btn-black px-3 py-2">Shop now</a></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Best Sellers -->
+              <div class="col-md-6">
+                <div class="choose-wrap wrap img align-self-stretch d-flex align-items-center" style="background-image: url(images/img2.jpg);">
+                  <div class="text text-center text-white px-5">
+                    <span class="subheading">Skincare</span>
+                    <h2>Best Sellers</h2>
+                    <p>Discover the most loved and highly rated skincare products by our customers for a radiant look.</p>
+                    <p><a href="face.html" class="btn btn-black px-3 py-2">Shop now</a></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="ftco-section ftco-deal bg-primary">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Product Image -->
+      <div class="col-md-6">
+        <img src="images/banner imges.jpg" class="img-fluid" alt="Luxury Face Cream">
+		<br>
+		  <!-- Second Image below main -->
+   <img src="images/img4.jpg" class="img-fluid second-img mb-3" alt="Special Offer">
+
+      
+      </div>
+	  <br>
+	 
+      <!-- Product Info -->
+      <div class="col-md-6">
+        <div class="heading-section heading-section-white">
+          <span class="subheading">Deal of the Month</span>
+          <h2 class="mb-3">Luxury Hydrating Face Cream</h2>
+        </div>
+        
+        <!-- Countdown Timer -->
+        <div id="timer" class="d-flex mb-4">
+          <div class="time" id="days">00 <small>Days</small></div>
+          <div class="time pl-4" id="hours">00 <small>Hours</small></div>
+          <div class="time pl-4" id="minutes">00 <small>Minutes</small></div>
+          <div class="time pl-4" id="seconds">00 <small>Seconds</small></div>
+        </div>
+      
+        Product Details
+        <div class="text-deal">
+          <h2><a href="#">Luxury Face Cream</a></h2>
+          <p class="price">
+            <span class="mr-2 price-dc">$90.00</span>
+            <span class="price-sale">$65.00</span>
+          </p>
+          
+          <!-- Product Variants / Thumbnails -->
+          <ul class="thumb-deal d-flex mt-4">
+            <li class="img" style="background-image: url(images/img1.jpg);"></li>
+			<br>
+            <li class="img" style="background-image: url(images/img2.jpg);"></li>
+			<br>
+            <li class="img" style="background-image: url(images/img3.jpg);"></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="ftco-section testimony-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="services-flow">
+          <div class="services-2 p-4 d-flex ftco-animate">
+            <div class="icon">
+              <span class="flaticon-bag"></span>
+            </div>
+            <div class="text">
+              <h3>Free Shipping</h3>
+              <p class="mb-0">Get your favorite skincare products delivered to your doorstep, free of cost.</p>
+            </div>
+          </div>
+          <div class="services-2 p-4 d-flex ftco-animate">
+            <div class="icon">
+              <span class="flaticon-heart-box"></span>
+            </div>
+            <div class="text">
+              <h3>Exclusive Gifts</h3>
+              <p class="mb-0">Receive special gifts with select skincare purchases to pamper yourself.</p>
+            </div>
+          </div>
+          <div class="services-2 p-4 d-flex ftco-animate">
+            <div class="icon">
+              <span class="flaticon-payment-security"></span>
+            </div>
+            <div class="text">
+              <h3>Secure Payments</h3>
+              <p class="mb-0">Safe and secure payment methods for all your skincare orders.</p>
+            </div>
+          </div>
+          <div class="services-2 p-4 d-flex ftco-animate">
+            <div class="icon">
+              <span class="flaticon-customer-service"></span>
+            </div>
+            <div class="text">
+              <h3>24/7 Customer Support</h3>
+              <p class="mb-0">We are here to help you with any questions about your skincare needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7">
+        <div class="heading-section ftco-animate mb-5">
+          <h2 class="mb-4">What Our Customers Say</h2>
+          <p>Our customers love our natural skincare products. Here’s what they have to say about our body care and skincare range.</p>
+        </div>
+
+        <div class="carousel-testimony owl-carousel">
+          <div class="item">
+            <div class="testimony-wrap">
+              <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-4 pl-4 line">“I have been using their luxury face creams for months. My skin feels soft, hydrated, and glowing!”</p>
+                <p class="name">Sophia Brown</p>
+                <span class="position">Beauty Blogger</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimony-wrap">
+              <div class="user-img mb-4" style="background-image: url(images/person_2.jpg)">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-4 pl-4 line">“The body scrubs are amazing! They leave my skin feeling fresh and rejuvenated every time.”</p>
+                <p class="name">Emily Davis</p>
+                <span class="position">Skincare Enthusiast</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimony-wrap">
+              <div class="user-img mb-4" style="background-image: url(images/person_3.jpg)">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-4 pl-4 line">“I love their natural ingredients. My sensitive skin has never been happier!”</p>
+                <p class="name">Olivia Wilson</p>
+                <span class="position">Health & Beauty Expert</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimony-wrap">
+              <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-4 pl-4 line">“Their skincare kits are perfect for gifting. I’ve recommended them to all my friends!”</p>
+                <p class="name">Isabella Martinez</p>
+                <span class="position">Wellness Coach</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimony-wrap">
+              <div class="user-img mb-4" style="background-image: url(images/person_1.jpg)">
+                <span class="quote d-flex align-items-center justify-content-center">
+                  <i class="icon-quote-left"></i>
+                </span>
+              </div>
+              <div class="text">
+                <p class="mb-4 pl-4 line">“Amazing customer service! They helped me choose the best products for my skin type.”</p>
+                <p class="name">Mia Johnson</p>
+                <span class="position">Lifestyle Blogger</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="ftco-gallery">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 heading-section text-center mb-4 ftco-animate">
+        <h2 class="mb-4">Follow Us On Instagram</h2>
+        <p>
+          Check out our latest skincare products and see how our customers are
+          glowing. Follow us on Instagram for daily beauty tips!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid px-0">
+    <div class="row no-gutters">
+
+      <!-- Item 1 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://www.thebodyshop.com.au/cdn/shop/files/CAENG_23Q2_VitaminCRange.jpg?crop=center&height=525&v=1760074730&width=525);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://dam.mediacorp.sg/image/upload/s--HUwp9Muh--/f_auto,q_auto/v1/mediacorp/cna/image/2024/07/26/the_right_way_to_use_vitamin_c_to_combat_those_pesky_dark_spots_2.jpg);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCwfpt6zEXyVeH10L9JKcRWFPLDQY_zAgpYw&s);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://cdn-cjhgk.nitrocdn.com/CXxGixRVyChwAxySbAyltuCiQXRKaWDN/assets/images/optimized/rev-9dad235/www.newbeauty.com/wp-content/uploads/2022/05/cer9.jpg);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1dLS9yF4NQDW0m28b1DfQuisYKdLtGXnstg&s);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="col-md-4 col-lg-2 ftco-animate">
+        <a href="https://www.instagram.com/luminouse_beauty/" target="_blank"
+          class="gallery img d-flex align-items-center"
+          style="background-image: url(https://joinherbeauty.com/cdn/shop/products/Her-34-Version011.png?v=1756061861&width=533);">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="icon-instagram"></span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Floating WhatsApp Button -->
+<a
+  href="https://wa.me/923215030213"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <i class="icon-whatsapp"></i>
+</a>
+
+
+
+
+
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+      	<div class="row">
+      		<div class="mouse">
+						<a href="#" class="mouse-icon">
+							<div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+						</a>
+					</div>
+      	</div>
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Luminouse Beauty shop</h2>
+              
+           <p>Nurturing your skin with gentle, effective, and trusted skincare products for a healthy, radiant glow.</p>
+
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              
+                <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61584606287033"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/luminouse_beauty/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Menu</h2>
+              <ul class="list-unstyled">
+                <li><a href="hair.html" class="py-2 d-block">Categories</a></li>
+                <li><a href="about.html" class="py-2 d-block">About</a></li>
+                <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Help</h2>
+              <div class="d-flex">
+	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+	                <li><a href="shipping.html" class="py-2 d-block">Shipping Information</a></li> 
+	                <li><a href="condition.html" class="py-2 d-block">Terms &amp; Conditions</a></li>
+	                <li><a href="contact.html" class="py-2 d-block">Contact us</a></li>
+	              </ul>
+	            
+	            </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Karachi , pakistan
+                  </span></li>
+	                <li>
+           <a href="https://wa.me/923215030213" target="_blank">
+    <span class="icon icon-phone"></span>
+    <span class="text">+92 321 5030213</span>
+  </a>
+</li>
+
+<li>
+  <a href="mailto:LuminouseBeauty004@gmail.com">
+    <span class="icon icon-envelope"> </span>
+    <span class="text"> LuminouseBeauty004@gmail.com</span>
+  </a>
+</li>
+
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+       <div class="row">
+      <div class="col-md-12 text-center">
+        <p>
+          &copy;<script>document.write(new Date().getFullYear());</script> © 2025 LuminouseBeauty . All Rights Reserved. </a>
+        </p>
+      </div>
+    </div>
+
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

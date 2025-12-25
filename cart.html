@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Minishop - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+
+
+
+
+<style>
+
+ 
+.ftco-navbar-light .navbar-nav .nav-link {
+  text-transform: uppercase;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  color: #000 !important;
+}
+
+.ftco-navbar-light .navbar-nav .nav-link:hover {
+  color: pink !important;
+}
+
+@media (max-width: 991px) {
+
+  /* Force normal state */
+  .navbar-nav .nav-item .nav-link {
+    color: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Hover / focus */
+  .navbar-nav .nav-item .nav-link:hover,
+  .navbar-nav .nav-item .nav-link:focus {
+    color: #f8c8dc !important;
+  }
+}
+
+
+/* Header scroll hone ke baad */
+.ftco-navbar-light.scrolled {
+  background: #fff !important;
+}
+
+/* Scroll state me menu links BLACK */
+.ftco-navbar-light.scrolled .navbar-nav .nav-link {
+  color: #000 !important;
+}
+
+/* Hover / Active */
+.ftco-navbar-light.scrolled .navbar-nav .nav-link:hover,
+.ftco-navbar-light.scrolled .navbar-nav .nav-link.active {
+  color: pink !important;
+}
+
+/* Mobile menu (scroll + open) */
+@media (max-width: 991px) {
+  .ftco-navbar-light.scrolled .navbar-nav .nav-link {
+    color: #000 !important;
+  }
+}
+
+
+.image-prod .img {
+  width: 80px;          /* Adjust as per your design */
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+}
+
+
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 26px;
+  line-height: 55px;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+  color: #fff;
+}
+
+
+
+
+
+
+</style>
+
+ 
+
+
+<script>
+function updateCartCount(){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let count = 0;
+
+  cart.forEach(item => {
+    count += Number(item.quantity);
+  });
+
+  const cartCount = document.getElementById("cart-count");
+  if(cartCount){
+    cartCount.innerText = count;
+  }
+}
+
+// page load
+document.addEventListener("DOMContentLoaded", updateCartCount);
+</script>
+
+
+     <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><img
+            src="images/one (2).png"
+            alt=""
+            width="80"
+            height="70"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown04"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Catalog</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                <a class="dropdown-item" href="cart.html">Cart</a>
+                <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownBlog"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownBlog">
+                <a class="dropdown-item" href="face.html">Face</a>
+                <a class="dropdown-item" href="hair.html">Hair</a>
+                <a class="dropdown-item" href="body.html"
+                  >Body</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <a href="cart.html" class="nav-link position-relative">
+  <span class="icon-shopping_cart"></span>
+  <span id="cart-count" class="cart-count">0</span>
+</a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+<!-- Floating WhatsApp Button -->
+<a
+  href="https://wa.me/923215030213"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <i class="icon-whatsapp"></i>
+</a>
+
+
+
+
+
+
+    <div class="hero-wrap hero-bread" style="background-image: url('images/contact.jpg');">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Cart</span></p>
+            <h1 class="mb-0 bread">My Wishlist</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section ftco-cart">
+			<div class="container">
+				<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div class="cart-list">
+	    				<table class="table">
+						    <thead class="thead-primary">
+						      <tr class="text-center">
+						        <th>&nbsp;</th>
+						        <th>&nbsp;</th>
+						        <th>Product</th>
+						        <th>Price</th>
+						        <th>Quantity</th>
+						        <th>Total</th>
+						      </tr>
+						    </thead>
+                <tbody id="cart-items">
+
+				
+						    </tbody>
+						  </table>
+					  </div>
+    			</div>
+    		</div>
+    		 <div class="row justify-content-start">
+    			<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
+            <div class="cart-total mb-3">
+  <h3>Cart Totals</h3>
+  <p class="d-flex">
+    <span>Subtotal</span>
+    <span id="cart-subtotal">0.00</span>
+  </p>
+  <p class="d-flex">
+    <span>Delivery</span>
+    <span id="cart-delivery">0.00</span>
+  </p>
+  <p class="d-flex">
+    <span>Discount</span>
+    <span id="cart-discount">0.00</span>
+  </p>
+  <hr>
+  <p class="d-flex total-price">
+    <span>Total</span>
+    <span id="cart-total">0.00</span>
+  </p>
+</div>
+
+    				<p class="text-center"><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
+    			</div>
+    		</div>
+			</div>
+		</section> 
+	
+    			
+
+
+
+
+
+
+
+          
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+      	<div class="row">
+      		<div class="mouse">
+						<a href="#" class="mouse-icon">
+							<div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+						</a>
+					</div>
+      	</div>
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Luminouse Beauty shop</h2>
+              
+           <p>Nurturing your skin with gentle, effective, and trusted skincare products for a healthy, radiant glow.</p>
+
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              
+                <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=61584606287033"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/luminouse_beauty/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Menu</h2>
+              <ul class="list-unstyled">
+                <li><a href="hair.html" class="py-2 d-block">Categories</a></li>
+                <li><a href="about.html" class="py-2 d-block">About</a></li>
+                <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Help</h2>
+              <div class="d-flex">
+	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+	                <li><a href="shipping.html" class="py-2 d-block">Shipping Information</a></li> 
+	                <li><a href="condition.html" class="py-2 d-block">Terms &amp; Conditions</a></li>
+	                <li><a href="contact.html" class="py-2 d-block">Contact us</a></li>
+	              </ul>
+	            
+	            </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Karachi , pakistan
+                  </span></li>
+	                <li>
+           <a href="https://wa.me/923215030213" target="_blank">
+    <span class="icon icon-phone"></span>
+    <span class="text">+92 321 5030213</span>
+  </a>
+</li>
+
+<li>
+  <a href="mailto:LuminouseBeauty004@gmail.com">
+    <span class="icon icon-envelope"> </span>
+    <span class="text"> LuminouseBeauty004@gmail.com</span>
+  </a>
+</li>
+
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+       <div class="row">
+      <div class="col-md-12 text-center">
+        <p>
+          &copy;<script>document.write(new Date().getFullYear());</script> © 2025 LuminouseBeauty . All Rights Reserved. </a>
+        </p>
+      </div>
+    </div>
+
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  let tbody = document.getElementById('cart-items');
+
+  if (!tbody) return;
+
+  tbody.innerHTML = ''; // purana content clear
+
+  if(cart.length === 0){
+    tbody.innerHTML = `<tr><td colspan="6" class="text-center">Cart is empty</td></tr>`;
+  } else {
+    cart.forEach((item, index) => {
+      let total = item.price * item.quantity;
+      tbody.innerHTML += `
+        <tr class="text-center">
+          <td class="product-remove">
+            <a href="#" onclick="removeItem(${index})"><span class="ion-ios-close"></span></a>
+          </td>
+          <td class="image-prod"><div class="img" style="background-image:url(${item.image});"></div></td>
+          <td class="product-name"><h3>${item.name}</h3></td>
+          <td class="price">$${item.price}</td>
+          <td>${item.quantity}</td>
+          <td class="total">$${total}</td>
+        </tr>
+      `;
+    });
+  }
+});
+
+function removeItem(index){
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.splice(index,1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  location.reload();
+}
+</script>
+
+
+
+
+
+<script>
+function renderCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let tbody = document.getElementById("cart-items");
+
+  if (!tbody) return;
+
+  tbody.innerHTML = ""; // Clear previous rows
+
+  if(cart.length === 0){
+    tbody.innerHTML = `<tr><td colspan="6" class="text-center">Cart is empty</td></tr>`;
+    updateTotals(0,0,0,0);
+    return;
+  }
+
+  let subtotal = 0;
+  let discount = 0;
+  let delivery = 0; // Change if needed
+
+  cart.forEach((item, index) => {
+    let total = item.price * item.quantity;
+    subtotal += total;
+
+    tbody.innerHTML += `
+      <tr class="text-center">
+        <td class="product-remove">
+          <a href="#" onclick="removeItem(${index})"><span class="ion-ios-close"></span></a>
+        </td>
+        <td class="image-prod">
+          <div class="img" style="background-image:url(${item.image});"></div>
+        </td>
+        <td class="product-name">
+          <h3>${item.name}</h3>
+        </td>
+        <td class="price">$${item.price.toFixed(2)}</td>
+        <td>${item.quantity}</td>
+        <td class="total">$${total.toFixed(2)}</td>
+      </tr>
+    `;
+  });
+
+  // Example: simple 10% discount
+  discount = subtotal * 0.1;
+  let totalPrice = subtotal + delivery - discount;
+
+  updateTotals(subtotal, delivery, discount, totalPrice);
+}
+
+function updateTotals(subtotal, delivery, discount, totalPrice){
+  document.getElementById("cart-subtotal").textContent = `$${subtotal.toFixed(2)}`;
+  document.getElementById("cart-delivery").textContent = `$${delivery.toFixed(2)}`;
+  document.getElementById("cart-discount").textContent = `$${discount.toFixed(2)}`;
+  document.getElementById("cart-total").textContent = `$${totalPrice.toFixed(2)}`;
+}
+
+function removeItem(index){
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.splice(index,1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart(); // Update table and totals dynamically
+}
+
+// On page load
+document.addEventListener("DOMContentLoaded", renderCart);
+</script>
+
+
+<script>
+// Format number as PKR
+function formatPKR(amount) {
+  return 'Rs. ' + amount.toLocaleString('en-PK', { minimumFractionDigits: 2 });
+}
+
+/* ------------------- CART LOGIC ------------------- */
+function renderCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let tbody = document.getElementById("cart-items");
+  if (!tbody) return;
+
+  tbody.innerHTML = "";
+
+  if (cart.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="6" class="text-center">Cart is empty</td></tr>`;
+    updateTotals(0, 0, 0, 0);
+    return;
+  }
+
+  let subtotal = 0;
+  let delivery = 0; // Change if needed
+  let discount = 0;
+
+  cart.forEach((item, index) => {
+    let total = item.price * item.quantity;
+    subtotal += total;
+
+    tbody.innerHTML += `
+      <tr class="text-center">
+        <td class="product-remove"><a href="#" onclick="removeItem(${index})"><span class="ion-ios-close"></span></a></td>
+        <td class="image-prod"><div class="img" style="background-image:url(${item.image});"></div></td>
+        <td class="product-name"><h3>${item.name}</h3></td>
+        <td class="price">${formatPKR(item.price)}</td>
+        <td>${item.quantity}</td>
+        <td class="total">${formatPKR(total)}</td>
+      </tr>
+    `;
+  });
+
+  discount = subtotal * 0.1; // 10% discount
+  let totalPrice = subtotal + delivery - discount;
+
+  updateTotals(subtotal, delivery, discount, totalPrice);
+}
+
+function updateTotals(subtotal, delivery, discount, totalPrice) {
+  document.getElementById("cart-subtotal").textContent = formatPKR(subtotal);
+  document.getElementById("cart-delivery").textContent = formatPKR(delivery);
+  document.getElementById("cart-discount").textContent = formatPKR(discount);
+  document.getElementById("cart-total").textContent = formatPKR(totalPrice);
+}
+
+function removeItem(index) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+  updateCartCount();
+}
+
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let total = cart.reduce((sum, item) => sum + Number(item.quantity), 0);
+  let el = document.getElementById("cart-count");
+  if (el) el.textContent = total;
+}
+
+/* ------------------- PRODUCT FILTER, SORT, VIEW MORE ------------------- */
+const INITIAL_VISIBLE = 4;
+const products = Array.from(document.querySelectorAll(".product"));
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+const sortPrice = document.getElementById("sortPrice");
+const viewMoreBtn = document.getElementById("viewMoreBtn");
+let showAll = false;
+
+function applyFilters() {
+  const searchVal = searchInput.value.toLowerCase();
+  const categoryVal = categoryFilter.value;
+
+  products.forEach((product) => {
+    const matchesSearch = product.dataset.name.toLowerCase().includes(searchVal);
+    const matchesCategory = categoryVal === "all" || product.dataset.category === categoryVal;
+    product.dataset.visible = matchesSearch && matchesCategory ? "true" : "false";
+  });
+
+  sortProducts();
+  updateVisibility();
+}
+
+function sortProducts() {
+  const list = document.getElementById("productList");
+  const visibleProducts = products.filter(p => p.dataset.visible === "true");
+
+  if (sortPrice.value === "low") {
+    visibleProducts.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
+  } else if (sortPrice.value === "high") {
+    visibleProducts.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
+  }
+
+  visibleProducts.forEach(p => list.appendChild(p));
+}
+
+function updateVisibility() {
+  let visibleCount = 0;
+  products.forEach(product => {
+    if (product.dataset.visible === "true") {
+      visibleCount++;
+      product.style.display = (showAll || visibleCount <= INITIAL_VISIBLE) ? "block" : "none";
+    } else {
+      product.style.display = "none";
+    }
+  });
+
+  viewMoreBtn.style.display = (!showAll && visibleCount > INITIAL_VISIBLE) ? "inline-block" : "none";
+}
+
+/* ------------------- PRODUCT CART ADD ------------------- */
+document.addEventListener("DOMContentLoaded", function () {
+  products.forEach(product => {
+    let qtyEl = product.querySelector(".qty");
+    let qty = 1;
+
+    product.querySelector(".plus").addEventListener("click", () => { qty++; qtyEl.textContent = qty; });
+    product.querySelector(".minus").addEventListener("click", () => { if(qty>1) qty--; qtyEl.textContent = qty; });
+
+    product.querySelector(".add-cart-btn").addEventListener("click", (e) => {
+      let name = product.dataset.name;
+      let price = parseFloat(product.dataset.price);
+      let image = product.querySelector("img").src;
+
+      if(!name || !price || !image) return alert("Product data missing!");
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let existing = cart.find(item => item.name === name);
+      if(existing) existing.quantity += qty;
+      else cart.push({name, price, image, quantity: qty});
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      e.target.textContent = "Added ✓";
+      e.target.classList.add("added");
+      e.target.disabled = true;
+
+      updateCartCount();
+      qty = 1;
+      qtyEl.textContent = qty;
+    });
+  });
+
+  renderCart();
+  updateCartCount();
+});
+
+products.forEach(product => product.dataset.visible = "true");
+updateVisibility();
+
+searchInput.addEventListener("input", () => { showAll = false; applyFilters(); });
+categoryFilter.addEventListener("change", () => { showAll = false; applyFilters(); });
+sortPrice.addEventListener("change", applyFilters);
+viewMoreBtn.addEventListener("click", () => { showAll = true; updateVisibility(); });
+
+window.addEventListener("focus", renderCart);
+</script>
+
+
+  </body>
+</html> 

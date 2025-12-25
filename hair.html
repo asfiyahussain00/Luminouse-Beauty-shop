@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hair Care Products | Beauty Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        :root {
+            --primary: #e83e8c;
+            --secondary: #6f42c1;
+            --soft: #fff3f8;
+            --dark: #222;
+        }
+
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, #fff, var(--soft));
+            color: var(--dark);
+        }
+
+
+        /* =========================
+   PAGE TITLE
+========================= */
+        .page-title {
+            text-align: center;
+            padding: 50px 20px 30px;
+            margin-top: 120px;
+        }
+
+        .page-title h1 {
+            font-size: 38px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        .page-title p {
+            margin-top: 8px;
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* =========================
+   FILTERS
+========================= */
+        .filters {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .filters input,
+        .filters select {
+            padding: 14px 18px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            background: #fff;
+            font-size: 14px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .06);
+            transition: .3s ease;
+        }
+
+        .filters input:focus,
+        .filters select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 12px 30px rgba(232, 62, 140, .25);
+        }
+
+        /* =========================
+   PRODUCTS GRID
+========================= */
+        .products {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 32px;
+            justify-content: center;
+        }
+
+        /* =========================
+   PRODUCT CARD
+========================= */
+        .product {
+            width: 100%;
+            max-width: 300px;
+            height: 560px;
+            /* FIXED HEIGHT */
+            background: #fff;
+            border-radius: 22px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            /* SAFE now */
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+        }
+
+
+
+        .product::before {
+            pointer-events: none;
+        }
+
+        .product-info,
+        .product img {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .product:hover::before {
+            opacity: 1;
+        }
+
+        .product:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 35px 70px rgba(232, 62, 140, .28);
+        }
+
+        .product img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background: #fafafa;
+            padding: 12px;
+            flex-shrink: 0;
+            /* VERY IMPORTANT */
+        }
+
+
+        .product:hover img {
+            transform: scale(1.08);
+        }
+
+        /* =========================
+   PRODUCT INFO
+========================= */
+        .product-info {
+            padding: 18px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            /* fills remaining height */
+        }
+
+        .add-cart-btn {
+            margin-top: auto;
+            /* PUSHES BUTTON DOWN */
+            width: 100%;
+            padding: 11px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: .4s ease;
+        }
+
+
+
+        .product-info h3 {
+            font-size: 15px;
+            line-height: 1.4;
+            height: 42px;
+            overflow: hidden;
+        }
+
+
+        .rating {
+            margin: 6px 0;
+            color: #ffc107;
+            letter-spacing: 1px;
+            animation: pulse 1.8s infinite alternate;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        /* =========================
+   CART CONTROLS
+========================= */
+        .cart-controls {
+            margin: 12px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 140px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            padding: 6px 14px;
+        }
+
+        .qty-btn {
+            border: none;
+            background: none;
+            font-size: 22px;
+            color: var(--primary);
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .qty-btn:hover {
+            color: var(--secondary);
+        }
+
+        .qty {
+            font-size: 16px;
+        }
+
+        /* =========================
+   ADD TO CART BUTTON
+========================= */
+        .add-cart-btn {
+            margin-top: 10px;
+            width: 100%;
+            padding: 11px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: .4s ease;
+        }
+
+        .add-cart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(232, 62, 140, .45);
+        }
+
+        .add-cart-btn.added {
+            background: #28a745;
+            animation: pop .4s ease;
+        }
+
+        /* =========================
+   VIEW MORE BUTTON
+========================= */
+        .view-more {
+            text-align: center;
+            margin: 45px 0;
+        }
+
+        .view-more button {
+            padding: 15px 44px;
+            border-radius: 40px;
+            border: 2px solid var(--primary);
+            background: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            letter-spacing: .5px;
+            cursor: pointer;
+            transition: .4s;
+            margin: auto;
+        }
+
+        .view-more button:hover {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            box-shadow: 0 15px 40px rgba(232, 62, 140, .4);
+        }
+
+        /* =========================
+   ANIMATIONS
+========================= */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes pulse {
+            from {
+                opacity: .7;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pop {
+            0% {
+                transform: scale(.8);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* =========================
+   RESPONSIVE
+========================= */
+        @media(max-width:768px) {
+            .page-title h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width:576px) {
+            .product {
+                max-width: 100%;
+                height: 500px;
+            }
+
+            .filters {
+                padding: 15px;
+            }
+        }
+
+        .ftco-navbar-light .navbar-nav .nav-link {
+            text-transform: uppercase;
+            font-weight: 600 !important;
+            font-size: 16px !important;
+            color: #000 !important;
+        }
+
+        .ftco-navbar-light .navbar-nav .nav-link:hover {
+            color: pink !important;
+        }
+
+        @media (max-width: 991px) {
+
+            /* Force normal state */
+            .navbar-nav .nav-item .nav-link {
+                color: #fff !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+
+            /* Hover / focus */
+            .navbar-nav .nav-item .nav-link:hover,
+            .navbar-nav .nav-item .nav-link:focus {
+                color: #f8c8dc !important;
+            }
+        }
+
+
+        /* Header scroll hone ke baad */
+        .ftco-navbar-light.scrolled {
+            background: #fff !important;
+        }
+
+        /* Scroll state me menu links BLACK */
+        .ftco-navbar-light.scrolled .navbar-nav .nav-link {
+            color: #000 !important;
+        }
+
+        /* Hover / Active */
+        .ftco-navbar-light.scrolled .navbar-nav .nav-link:hover,
+        .ftco-navbar-light.scrolled .navbar-nav .nav-link.active {
+            color: pink !important;
+        }
+
+        /* Mobile menu (scroll + open) */
+        @media (max-width: 991px) {
+            .ftco-navbar-light.scrolled .navbar-nav .nav-link {
+                color: #000 !important;
+            }
+        }
+
+
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 26px;
+            line-height: 55px;
+            z-index: 9999;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+            color: #fff;
+        }
+    </style>
+
+
+
+    <script>
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let total = cart.reduce((sum, item) => sum + Number(item.quantity), 0);
+            let el = document.getElementById("cart-count");
+            if (el) el.textContent = total;
+        }
+
+        // Page load pe update
+        document.addEventListener("DOMContentLoaded", updateCartCount);
+
+        // Page wapas focus me bhi update (jab user cart page se home aaye)
+        window.addEventListener("focus", updateCartCount);
+
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/one (2).png" alt="" width="80" height="70" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Catalog</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="cart.html">Cart</a>
+                            <a class="dropdown-item" href="checkout.html">Checkout</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownBlog" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Categories
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownBlog">
+                            <a class="dropdown-item" href="face.html">Face</a>
+                            <a class="dropdown-item" href="hair.html">Hair</a>
+                            <a class="dropdown-item" href="body.html">Body</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <a href="cart.html" class="nav-link position-relative ">
+                        <span class="icon-shopping_cart"></span>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-title">
+        <h1>Hair Care Collection</h1>
+        <p>Nourish, Repair & Style Your Hair</p>
+    </div>
+
+    <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="oil">Hair Oils</option>
+            <option value="shampoo">Shampoos</option>
+            <option value="conditioner">Conditioners</option>
+            <option value="mask">Hair Masks</option>
+            <option value="serum">Hair Serums</option>
+        </select>
+        <select id="sortPrice">
+            <option value="default">Sort by Price</option>
+            <option value="low">Low to High</option>
+            <option value="high">High to Low</option>
+        </select>
+    </div>
+
+    <div class="products" id="productList">
+
+        <!-- 15 Dummy Products -->
+        <div class="product" data-name="L'Oréal Paris Serie Expert Absolute Repair Golden Professional Mask 500 ml"
+            data-category="mask" data-price="11800">
+            <img src="images/product1.jpg">
+            <div class="product-info">
+                <h3>L'Oréal Paris Serie Expert Absolute Repair Golden Professional Mask 500 ml</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">Rs. 11800</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="Loreal Professional Source Essentielle Nourishing Masque 300ml"
+            data-category="mask" data-price="6400">
+            <img
+                src="https://www.saloncentric.com/dw/image/v2/BJRM_PRD/on/demandware.static/-/Sites-salon-centric-master-catalog/default/dwfcf07095/large/0000030162402.jpg">
+            <div class="product-info">
+                <h3>Loreal Professional Source Essentielle Nourishing Masque 300ml</h3>
+                <div class="rating">★★★★☆</div>
+                <div class="price">Rs. 6400</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="Loreal Elvive Extraordinary Sublime Hair Enhancer Serum 50ml, All Hair Types"
+            data-category="serum" data-price="2600">
+            <img
+                src="https://infinitebeauty.pk/cdn/shop/files/rn-image_picker_lib_temp_5a4b08a2-34f5-45b8-a917-e2367c8c324a.png?v=1754888904">
+            <div class="product-info">
+                <h3>
+                    Loreal Elvive Extraordinary Sublime Hair Enhancer Serum 50ml, All Hair Types</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">Rs. 2600</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="Nivea Shampoo Volume & Strength Shine Serum 400 ML" data-category="serum"
+            data-price="1620">
+            <img
+                src="https://infinitebeauty.pk/cdn/shop/files/NiveaShampooVolume_StrengthShineSerum400ML.png?v=1754889018">
+            <div class="product-info">
+                <h3>
+                    Nivea Shampoo Volume & Strength Shine Serum 400 ML</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">Rs. 1620</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="conditioner" data-category="conditioner" data-price="1620">
+            <img src="https://infinitebeauty.pk/cdn/shop/files/Photoroom-20250125_044534.png?v=1754889018">
+            <div class="product-info">
+                <h3>
+                    Nivea 2 - in - 1 Care Express Mild Shampoo and Conditioner (400 ml)</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">Rs. 1620</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="biotin & collagen shampoo" data-category="shampoo" data-price="765">
+            <img src="https://infinitebeauty.pk/cdn/shop/files/Biotin_CollagenThickeningShampoo400ml.png?v=1754889280">
+            <div class="product-info">
+                <h3>Biotin & Collagen Thickening Shampoo 400ml</h3>
+                <div class="rating">★★★★☆</div>
+                <div class="price">Rs. 765</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="shine shampoo" data-category="shampoo" data-price="765">
+            <img
+                src="https://infinitebeauty.pk/cdn/shop/files/XCHBiotin_CollagenThickeningConditioner400ml.png?v=1754889390">
+            <div class="product-info">
+                <h3>Biotin & Collagen Thickening Conditioner 400ml</h3>
+                <div class="rating">★★★★☆</div>
+                <div class="price">Rs. 765</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="shampoo" data-category="shampoo" data-price="2399">
+            <img
+                src="https://infinitebeauty.pk/cdn/shop/files/GarnierFructisColourLastShampooforColoured.png?v=1754889281">
+            <div class="product-info">
+                <h3>
+                    Garnier Fructis Colour Last Shampoo for Coloured Hair 850ml</h3>
+                <div class="rating">★★★★☆</div>
+                <div class="price">Rs. 2399</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="coconut oil shampoo" data-category="shampoo" data-price="1799">
+            <img
+                src="https://infinitebeauty.pk/cdn/shop/files/LorealElviveExtraordinaryCoconutOilShampoo380.png?v=1754889513">
+            <div class="product-info">
+                <h3>Loreal Elvive Extraordinary Coconut Oil Shampoo 380ml</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">Rs. 1799</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="hair Gel" data-category="mask gel" data-price="1575">
+            <img
+                src="https://infinitebeauty.pk/cdn/shop/files/Loreal_Paris_Line_Studio_Invisi_Hold_6_Normal_Stre.png?v=1754889339">
+            <div class="product-info">
+                <h3>
+                    Loreal Paris Line Studio Invisi Hold 6 Normal Strength Styling Hair Gel 150ml</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">Rs. 1575</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="Loreal Studio Line 4 Fix & Style Strong Hold Hair Styling Gel 150ml"
+            data-category="gel mask" data-price="1575">
+            <img
+                src="https://infinitebeauty.pk/cdn/shop/files/LorealStudioLine4Fix_StyleStrongHoldHair.png?v=1754889175">
+            <div class="product-info">
+                <h3>
+                    Loreal Studio Line 4 Fix & Style Strong Hold Hair Styling Gel 150ml</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">Rs. 1575</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="Tresemme shampoo" data-category="shampoo" data-price="1799">
+            <img
+                src="https://infinitebeauty.pk/cdn/shop/files/TresemmeCleanse_Replenish3in1ShampooAndCond.png?v=1754889390">
+            <div class="product-info">
+                <h3>Tresemme Cleanse & Replenish 3in1 Shampoo And Conditioner 828ml</h3>
+                <div class="rating">★★★★☆</div>
+                <div class="price">Rs. 1799</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="loreal elvive shampoo" data-category="shampoo" data-price="2455">
+            <img src="https://infinitebeauty.pk/cdn/shop/files/Photoroom-20250118_071429.png?v=1754889415">
+            <div class="product-info">
+                <h3>Loreal elvive shampoo full restore 5 700 ml</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">Rs. 2455</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product" data-name="Loreal elvive Reparacion Total Extreme Shampoo" data-category="shampoo"
+            data-price="1695">
+            <img
+                src="https://infinitebeauty.pk/cdn/shop/files/L_OrealElviveReparacionTotalExtremeShampoo.png?v=1754889223">
+            <div class="product-info">
+                <h3>L'Oreal Elvive Reparacion Total Extreme Shampoo 370ml</h3>
+                <div class="rating">★★★★★</div>
+                <div class="price">Rs. 1695</div>
+                <div class="cart-controls"><button class="qty-btn minus">−</button><span class="qty">1</span><button
+                        class="qty-btn plus">+</button></div>
+                <button class="add-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="view-more">
+        <button id="viewMoreBtn">View More Products</button>
+    </div>
+
+    <footer class="ftco-footer ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="mouse">
+                    <a href="#" class="mouse-icon">
+                        <div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Luminouse Beauty shop</h2>
+
+                        <p>Nurturing your skin with gentle, effective, and trusted skincare products for a healthy,
+                            radiant glow.</p>
+
+                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+
+                            <li class="ftco-animate"><a
+                                    href="https://www.facebook.com/profile.php?id=61584606287033"><span
+                                        class="icon-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="https://www.instagram.com/luminouse_beauty/"><span
+                                        class="icon-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4 ml-md-5">
+                        <h2 class="ftco-heading-2">Menu</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="body.html" class="py-2 d-block">Categories</a></li>
+                            <li><a href="about.html" class="py-2 d-block">About</a></li>
+                            <li><a href="contact.html" class="py-2 d-block">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Help</h2>
+                        <div class="d-flex">
+                            <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+                                <li><a href="shipping.html" class="py-2 d-block">Shipping Information</a></li>
+                                <li><a href="condition.html" class="py-2 d-block">Terms &amp; Conditions</a></li>
+                                <li><a href="contact.html" class="py-2 d-block">Contact us</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="ftco-footer-widget mb-4">
+                        <h2 class="ftco-heading-2">Have a Questions?</h2>
+                        <div class="block-23 mb-3">
+                            <ul>
+                                <li><span class="icon icon-map-marker"></span><span class="text">Karachi , pakistan
+                                    </span></li>
+                                <li>
+                                    <a href="https://wa.me/923215030213" target="_blank">
+                                        <span class="icon icon-phone"></span>
+                                        <span class="text">+92 321 5030213</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="mailto:LuminouseBeauty004@gmail.com">
+                                        <span class="icon icon-envelope"> </span>
+                                        <span class="text"> LuminouseBeauty004@gmail.com</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        &copy;
+                        <script>document.write(new Date().getFullYear());</script> © 2025 LuminouseBeauty . All Rights
+                        Reserved. </a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+/* ------------------- PRODUCT FILTER, SORT, VIEW MORE ------------------- */
+const INITIAL_VISIBLE = 4;
+const products = Array.from(document.querySelectorAll(".product"));
+const searchInput = document.getElementById("searchInput");
+const categoryFilter = document.getElementById("categoryFilter");
+const sortPrice = document.getElementById("sortPrice");
+const viewMoreBtn = document.getElementById("viewMoreBtn");
+
+let showAll = false;
+
+function applyFilters() {
+  const searchVal = searchInput.value.toLowerCase();
+  const categoryVal = categoryFilter.value;
+
+  products.forEach((product) => {
+    const matchesSearch = product.dataset.name.toLowerCase().includes(searchVal);
+    const matchesCategory = categoryVal === "all" || product.dataset.category === categoryVal;
+    product.dataset.visible = matchesSearch && matchesCategory ? "true" : "false";
+  });
+
+  sortProducts();
+  updateVisibility();
+}
+
+function sortProducts() {
+  const list = document.getElementById("productList");
+  const visibleProducts = products.filter(p => p.dataset.visible === "true");
+
+  if (sortPrice.value === "low") {
+    visibleProducts.sort((a, b) => Number(a.dataset.price) - Number(b.dataset.price));
+  } else if (sortPrice.value === "high") {
+    visibleProducts.sort((a, b) => Number(b.dataset.price) - Number(a.dataset.price));
+  }
+
+  visibleProducts.forEach(p => list.appendChild(p));
+}
+
+function updateVisibility() {
+  let visibleCount = 0;
+  products.forEach(product => {
+    if (product.dataset.visible === "true") {
+      visibleCount++;
+      product.style.display = (showAll || visibleCount <= INITIAL_VISIBLE) ? "block" : "none";
+    } else {
+      product.style.display = "none";
+    }
+  });
+
+  viewMoreBtn.style.display = (!showAll && visibleCount > INITIAL_VISIBLE) ? "inline-block" : "none";
+}
+
+products.forEach(product => product.dataset.visible = "true");
+updateVisibility();
+
+searchInput.addEventListener("input", () => { showAll = false; applyFilters(); });
+categoryFilter.addEventListener("change", () => { showAll = false; applyFilters(); });
+sortPrice.addEventListener("change", applyFilters);
+viewMoreBtn.addEventListener("click", () => { showAll = true; updateVisibility(); });
+
+/* ------------------- CART LOGIC ------------------- */
+document.addEventListener("DOMContentLoaded", function () {
+  products.forEach(product => {
+    let qtyEl = product.querySelector(".qty");
+    let qty = 1;
+
+    // Quantity controls
+    product.querySelector(".plus").addEventListener("click", () => {
+      qty++;
+      qtyEl.textContent = qty;
+    });
+    product.querySelector(".minus").addEventListener("click", () => {
+      if (qty > 1) qty--;
+      qtyEl.textContent = qty;
+    });
+
+    // Add to cart
+    product.querySelector(".add-cart-btn").addEventListener("click", (e) => {
+      let name = product.dataset.name;
+      let price = parseFloat(product.dataset.price);
+      let image = product.querySelector("img").src;
+
+      if (!name || !price || !image) return alert("Product data missing!");
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let existing = cart.find(item => item.name === name);
+      if (existing) {
+        existing.quantity += qty;
+      } else {
+        cart.push({ name, price, image, quantity: qty });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // Button feedback
+      e.target.textContent = "Added ✓";
+      e.target.classList.add("added");
+      e.target.disabled = true;
+
+      updateCartCount();
+      qty = 1; // reset quantity
+      qtyEl.textContent = qty;
+    });
+  });
+
+  renderCart();
+  updateCartCount();
+});
+
+// Cart count in header
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let total = cart.reduce((sum, item) => sum + Number(item.quantity), 0);
+  let el = document.getElementById("cart-count");
+  if (el) el.textContent = total;
+}
+
+</script>
+
+
+
+
+
+
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923215030213" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="icon-whatsapp"></i>
+    </a>
+
+
+
+
+
+
+
+</body>
+
+</html>
