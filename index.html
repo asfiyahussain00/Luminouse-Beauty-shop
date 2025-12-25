@@ -384,14 +384,15 @@ html, body {
 }
 
 
-
-/* Cart icon fixed top-right */
-.fixed-cart {
-    position: fixed;  /* fixed screen ke upar */
-    top: 20px;        /* distance from top */
-    right: 20px;      /* distance from right */
-    z-index: 9999;    /* always on top */
+/* Navbar ke andar icon fixed rakhne ke liye */
+.navbar .fixed-cart {
+    position: absolute; /* ya fixed agar screen me upar chahiye */
+    top: 50%;           /* vertically center */
+    transform: translateY(-50%);
+    right: 20px;        /* right side me */
+    z-index: 9999;
 }
+
 
 
 
