@@ -384,15 +384,26 @@ html, body {
 }
 
 
-/* Navbar ke andar icon fixed rakhne ke liye */
-.navbar .fixed-cart {
-    position: absolute; /* ya fixed agar screen me upar chahiye */
-    top: 50%;           /* vertically center */
-    transform: translateY(-50%);
-    right: 20px;        /* right side me */
-    z-index: 9999;
+
+/* Navbar ke andar icon ko fixed position pe rakhne ke liye */
+.navbar .nav-link.fixed-cart {
+    position: fixed;  /* scroll ke saath upar rahe */
+    top: 20px;        /* distance from top */
+    right: 20px;      /* distance from right */
+    z-index: 9999;    /* upar sab ke */
+    display: flex;
+    align-items: center;
 }
 
+/* Cart count styling (optional) */
+#cart-count {
+    background: yellow;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+}
 
 
 
